@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmejri <tmejri@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tas <tas@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 20:19:14 by aclement          #+#    #+#             */
-/*   Updated: 2023/10/22 22:34:23 by tmejri           ###   ########.fr       */
+/*   Updated: 2023/10/23 00:51:14 by tas              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,92 +68,14 @@ int	init_imgs(t_mlx *mlx, t_textures *texture, t_elem *elem)
 	if (!texture[3].mlx_img || texture[3].w != IMG_WIDTH || \
 		texture[3].h != IMG_HEIGHT)
 		return (printf("Error\nEast image gone wrong\n"), 0);
-	printf("%p\n", texture[0].mlx_img);
-	printf("%p\n", texture[1].mlx_img);
-	printf("%p\n", texture[2].mlx_img);
-	printf("%p\n", texture[3].mlx_img);
-	printf("2.w = %d && 2.h = %d\n", texture[2].w, texture[2].h);
 	return (1);
 }
 
 int	create_window(t_mlx *mlx)
 {
-	//mlx->screen_width = SCREENWIDTH;
-	//mlx->screen_height = SCREENHEIGHT;
-	//mlx_get_screen_size(mlx->mlx_ptr, &mlx->sizex, &mlx->sizey);
-	//if (mlx->screen_width > mlx->sizex)
-	//	mlx->screen_width = mlx->sizex;
-	//if (mlx->screen_height > mlx->sizey)
-	//	mlx->screen_height = mlx->sizey;
 	mlx->mlx_win = mlx_new_window(mlx->mlx_ptr, SCREENWIDTH, \
 		SCREENHEIGHT, "CUB3D");
 	if (!mlx->mlx_win)
 		return (0);
 	return (1);
-}
-
-void	init_tab_float(t_map *map)
-{
-    int     i;
-    int     j;
-    double  i_float;
-    double  j_float;
-    double  scale;
-
-    scale = 1.0;
-    map->map_float = malloc(sizeof(t_point *) * map->mapheight);
-	if (!map->map_float)
-		return ;
-    i = 0;
-    while (i < map->mapheight)
-    {
-        map->map_float[i] = malloc(sizeof(t_point) * map->mapwidth);
-		if (! map->map_float[i])
-			return ;
-        j = 0;
-        while (j < map->mapwidth)
-        {
-            i_float = i * scale;
-            j_float = j * scale;
-			map->map_float[i][j].type = map->fmap[i][j];
-            map->map_float[i][j].x = i_float;
-            map->map_float[i][j].y = j_float;
-			// printf("{(%d, %d) --> %c}", i, j, map->map_float[i][j].type);
-			printf("%c", map->map_float[i][j].type);
-            j++;
-        }
-		printf("\n");
-        i++;
-    }
-}
-
-void	init_pos_player(t_mlx *mlx)
-{
-	if (mlx->coord.pos_start == 'N')
-		mlx->seg_angle = PI / 2;
-	if (mlx->coord.pos_start == 'S')
-		mlx->seg_angle = -PI / 2;
-	if (mlx->coord.pos_start == 'E')
-		mlx->seg_angle = PI * 2;
-	if (mlx->coord.pos_start == 'W')
-		mlx->seg_angle = PI;
-}
-
-void	init_param(t_mlx *mlx)
-{
-	mlx->env.map.angle = atan2(mlx->env.map.ang_x, mlx->env.map.ang_y);
-	mlx->env.map.rad_angle = mlx->env.map.angle * (180.0 / PI);
-	mlx->prev_img = mlx->img;
-	init_tab_float(&mlx->env.map);
-	mlx->coord.pos_player_x = (double)(find_x(&mlx->env.map) + 0.5);
-	mlx->coord.pos_player_y = (double)(find_y(&mlx->env.map) + 0.5);
-	mlx->coord.pos_start = mlx->env.map.tab[find_y(&mlx->env.map)][find_x(&mlx->env.map)];
-	init_pos_player(mlx);
-	mlx->tab_len_ray = malloc(sizeof(double) * SCREENWIDTH);
-    if (!mlx->tab_len_ray)
-        return ;
-    mlx->tab_angle_ray = malloc(sizeof(double) * SCREENWIDTH);
-    if (!mlx->tab_angle_ray)
-		return ;
-    // printf("init: (%f, %f)\n  {%c}\n", mlx->coord.pos_player_y, mlx->coord.pos_player_x, mlx->env.map.tab[find_y(&mlx->env.map)][find_x(&mlx->env.map)]);
 }

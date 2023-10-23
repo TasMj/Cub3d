@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmejri <tmejri@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tas <tas@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 20:19:14 by tas               #+#    #+#             */
-/*   Updated: 2023/10/22 22:43:47 by tmejri           ###   ########.fr       */
+/*   Updated: 2023/10/23 08:52:05 by tas              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,6 @@ int	ft_recup_map(t_env *data, char **av)
 	return (i - 1);
 }
 
-//verif erreur de lecture et douverture, appel a ft_recup_map
-//appel checker dabord les elements N S W E F C
-
 void	ft_line_by_line(t_env *data, char **av)
 {
 	int	j;
@@ -71,8 +68,6 @@ void	ft_line_by_line(t_env *data, char **av)
 		exit(0);
 	}
 }
-
-//verif que av[1] soit au minim compose de .cub
 
 int	ft_verif_extansion(char *av)
 {
@@ -105,16 +100,6 @@ int	launch_mlx(t_mlx *mlx)
 	init_textures(mlx->texture);
 	init_adress_window(mlx);
 	init_param(mlx);
-	// printf("ICIIIIII: %s\n", );
-
-	put_pixel_map(mlx, &mlx->img);
-	// mlx_pixel_put(mlx->mlx_ptr, mlx->mlx_win, 4, 0, 0x00FFFF99);
-	// int	*x = malloc(4);
-	// *x = 64;
-	// int	*y = malloc(4);
-	// *y = 64;
-	// void *test = mlx_xpm_file_to_image(mlx->mlx_ptr, "./textures/wall64-no.xpm", x, y);
-	// mlx_put_image_to_window(mlx->mlx_ptr, mlx->mlx_win, test, 20, 20);
 	mlx_hook(mlx->mlx_win, 17, 0, close_win, mlx->mlx_ptr);
 	mlx_key_hook(mlx->mlx_win, keypress, mlx);
 	mlx_loop(mlx->mlx_ptr);
@@ -137,7 +122,6 @@ int	main(int ac, char **av)
 			if (launch_mlx(&mlx) == 0)
 				return (ft_close_window(&mlx), 0);
 		}
-		//ft_free_mlx(&mlx);
 		ft_close_window(&mlx);
 	}
 	return (0);

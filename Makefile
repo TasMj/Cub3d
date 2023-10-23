@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tmejri <tmejri@student.42.fr>              +#+  +:+       +#+         #
+#    By: tas <tas@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/25 20:17:27 by tas               #+#    #+#              #
-#    Updated: 2023/10/21 15:50:00 by tmejri           ###   ########.fr        #
+#    Updated: 2023/10/23 08:55:16 by tas              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,12 +30,15 @@ LINUXFLAG	=	-lm -lX11 -lXext
 LIB			=	ft mlx_Linux
 
 SRC			= 	main.c\
+				raycasting.c\
+				3d.c\
 				recup_map.c\
 				keypress.c\
 				tools.c\
-				pixel.c\
 				free.c\
+				free2.c\
 				init.c\
+				init2.c\
 				check_nswe.c\
 				verif_line_by_line.c\
 				verif_map.c\

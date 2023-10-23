@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_fc.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aclement <aclement@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tas <tas@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 18:00:13 by aclement          #+#    #+#             */
-/*   Updated: 2023/09/28 17:46:10 by aclement         ###   ########.fr       */
+/*   Updated: 2023/10/23 00:30:52 by tas              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,9 +65,6 @@ int	ft_check_f(t_env *data)
 	}
 	return (0);
 }
-
-// return (0) : error et imprime 0 255
-// return 1 si ok
 
 int	verif_size_colors(char *line, int nb_vir)
 {

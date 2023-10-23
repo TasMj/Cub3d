@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_elements.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aclement <aclement@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tas <tas@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 17:27:20 by aclement          #+#    #+#             */
-/*   Updated: 2023/10/20 14:32:25 by aclement         ###   ########.fr       */
+/*   Updated: 2023/10/23 08:52:55 by tas              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,6 @@ int	check_no_double_elem(t_env *data, int i, char c)
 	}
 	return (1);
 }
-
-//return 0 si erreur
-//1 si ca coule
 
 int	ft_check_elements(t_env *data)
 {
@@ -91,11 +88,7 @@ int	tmp_check_map(t_env *data, int j, int jj)
 		data->map.tab[i] = data->tab[j--];
 		jj = get_n(data->map.tab[i]);
 		if (jj != -1)
-		{
 			data->map.tab[i][jj] = '\0';
-			// if (data->map.mapwidth < (int)ft_strlen(data->map.tab[i]))
-				// data->map.mapwidth = (int)ft_strlen(data->map.tab[i]);
-		}
 		i--;
 	}
 	return (1);
@@ -129,4 +122,3 @@ int	ft_check_map(t_env *data)
 		return (0);
 	return (verif_map(&data->map));
 }
-

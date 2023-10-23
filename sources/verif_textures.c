@@ -3,18 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   verif_textures.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aclement <aclement@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tas <tas@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 18:07:05 by aclement          #+#    #+#             */
-/*   Updated: 2023/10/18 15:26:33 by aclement         ###   ########.fr       */
+/*   Updated: 2023/10/23 09:12:17 by tas              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
-
-//passer NO et les espaces jusauqu path
-//verifier lextansion .xpm
-//verifier louvertre
 
 int	ft_verif_text_xpm(char *text)
 {
