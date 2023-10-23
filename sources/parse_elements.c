@@ -6,7 +6,7 @@
 /*   By: tas <tas@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 17:27:20 by aclement          #+#    #+#             */
-/*   Updated: 2023/10/23 08:52:55 by tas              ###   ########.fr       */
+/*   Updated: 2023/10/23 09:18:12 by tas              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,22 +41,16 @@ int	ft_check_elements(t_env *data)
 {
 	if (ft_check_no(data) == 0)
 		return (0);
-	printf("elem no : '%s'\n", data->elem.no);
 	if (ft_check_so(data) == 0)
 		return (0);
-	printf("elem so : '%s'\n", data->elem.so);
 	if (ft_check_we(data) == 0)
 		return (0);
-	printf("elem we : '%s'\n", data->elem.we);
 	if (ft_check_ea(data) == 0)
 		return (0);
-	printf("elem ea : '%s'\n", data->elem.ea);
 	if (ft_check_f(data) == 0)
 		return (0);
-	printf("elem f : '%s'\n", data->elem.f);
 	if (ft_check_c(data) == 0)
 		return (0);
-	printf("elem c : '%s'\n", data->elem.c);
 	return (1);
 }
 

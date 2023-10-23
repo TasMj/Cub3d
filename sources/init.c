@@ -6,7 +6,7 @@
 /*   By: tas <tas@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 20:19:14 by aclement          #+#    #+#             */
-/*   Updated: 2023/10/23 00:51:14 by tas              ###   ########.fr       */
+/*   Updated: 2023/10/23 09:19:12 by tas              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,6 @@ void	init_colors(t_mlx *mlx, t_elem *elem)
 {
 	mini_split_trim(elem->f, elem, 'f');
 	mini_split_trim(elem->c, elem, 'c');
-	printf("f[0]: %d\n", elem->floor[0]);
-	printf("f[1]: %d\n", elem->floor[1]);
-	printf("f[2]: %d\n", elem->floor[2]);
-	printf("c[0]: %d\n", elem->ceil[0]);
-	printf("c[1]: %d\n", elem->ceil[1]);
-	printf("c[2]: %d\n", elem->ceil[2]);
 	mlx->img.floor = encode_rgb(elem->floor[0], elem->floor[1], elem->floor[2]);
 	mlx->img.ceil = encode_rgb(elem->ceil[0], elem->ceil[1], elem->ceil[2]);
 }

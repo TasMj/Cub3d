@@ -6,7 +6,7 @@
 #    By: tas <tas@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/25 20:17:27 by tas               #+#    #+#              #
-#    Updated: 2023/10/23 08:55:16 by tas              ###   ########.fr        #
+#    Updated: 2023/10/23 09:16:58 by tas              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,6 @@ LIB			=	ft mlx_Linux
 SRC			= 	main.c\
 				raycasting.c\
 				3d.c\
-				recup_map.c\
 				keypress.c\
 				tools.c\
 				free.c\

@@ -6,7 +6,7 @@
 /*   By: tas <tas@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 12:43:26 by aclement          #+#    #+#             */
-/*   Updated: 2023/10/23 09:09:14 by tas              ###   ########.fr       */
+/*   Updated: 2023/10/23 09:16:35 by tas              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,30 @@ int	find_y(t_map *map)
 		i++;
 	}
 	return (-1);
+}
+
+void	recup_map(t_map *map)
+{
+	int	i;
+	int	j;
+
+	map->fmap = malloc(sizeof(char *) * map->mapheight);
+	if (!map->fmap)
+		return ;
+	j = 0;
+	while (j < map->mapheight)
+	{
+		i = 0;
+		map->fmap[j] = malloc(sizeof(char) * (map->mapwidth));
+		if (! map->fmap[j])
+			return ;
+		while (map->tab[j][i] != '\0')
+		{
+			map->fmap[j][i] = map->tab[j][i];
+			i++;
+		}
+		while (i < map->mapwidth)
+			map->fmap[j][i++] = '1';
+		j++;
+	}
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   verif_line_by_line.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aclement <aclement@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tas <tas@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 13:16:57 by aclement          #+#    #+#             */
-/*   Updated: 2023/10/20 14:10:31 by aclement         ###   ########.fr       */
+/*   Updated: 2023/10/23 09:16:08 by tas              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,6 @@ int	verif_map_lines(t_env *data, int j)
 	int	i;
 
 	i = 0;
-	printf("map->size: %d\n", data->map.size);
 	while (i < data->map.size)
 	{
 		if ((data->tab[j + i][0] == '\n' ) && ((j + i + 1) < data->map.size + j)

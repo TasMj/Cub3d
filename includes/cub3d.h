@@ -6,7 +6,7 @@
 /*   By: tas <tas@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 20:25:08 by tas               #+#    #+#             */
-/*   Updated: 2023/10/23 08:58:21 by tas              ###   ########.fr       */
+/*   Updated: 2023/10/23 09:20:13 by tas              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -177,14 +177,6 @@ int		key_arrow(int keycode, t_mlx *mlx, t_coord *coord);
 recup_map.c
 */
 void	recup_map(t_map *map);
-
-/*
-pixel.c
-*/
-void	put_pixel_map(t_mlx *mlx, t_textures *img);
-void	put_pixel(t_textures *img, int x, int y, int color);
-void	draw_grille(t_textures *img, t_map *map, t_mlx *mlx);
-void	draw_grille_annex(t_textures *img, t_coord *c, t_mlx *mlx);
 
 /*
 free.c
